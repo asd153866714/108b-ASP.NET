@@ -13,3 +13,7 @@
 顯示 Item
 編輯 Edit
 新增 Insert
+
+`
+Text='<%# Bind("birth") %>'   // 雙向模式
+`
