@@ -21,3 +21,5 @@ Text='<%# Bind("birth") %>'
 // 可以做運算 單向
 Eval()
 ```
+
+重新設定 DataSource 
