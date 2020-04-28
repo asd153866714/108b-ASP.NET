@@ -15,5 +15,9 @@
 新增 Insert
 
 `
-Text='<%# Bind("birth") %>'   // 雙向模式
+// 雙向模式 無法做運算
+Text='<%# Bind("birth") %>'   
+
+// 可以做運算 單向
+Eval()
 `
