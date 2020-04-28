@@ -23,3 +23,15 @@ Eval()
 ```
 
 重新設定 DataSource 
+
+where
+
+user_id
+
+querystring
+
+id
+
+分頁 ?id=bill
+
+進階模式
