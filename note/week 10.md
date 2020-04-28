@@ -1,6 +1,6 @@
 ## Member Detail 編輯
 
-步驟:
+步驟：
 
 1. DetailView 工作 
 
