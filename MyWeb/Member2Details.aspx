@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Member2 Details</title>
 </head>
-<body>
+<body style="padding:80px">
     <form id="form1" runat="server">
         <div>
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="user_id" DataSourceID="SqlDataSource1">

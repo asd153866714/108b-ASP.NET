@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>會員管理頁面</title>
 </head>
-<body>
+<body style="padding:80px">
     <form id="form1" runat="server">
         <div>
             <h1>會員管理頁面</h1>

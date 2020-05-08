@@ -5,19 +5,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <style>
+        #content {
+            margin:auto;
+            width: 50%;
+            position:relative;
+        }
+    </style>
+
     <title>公告內容</title>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:DetailsView ID="DetailsView1" runat="server" Height="128px" Width="178px" AutoGenerateRows="False" DataKeyNames="news_id" DataSourceID="SqlDataSource1">
+        <div id="content">
+            <asp:DetailsView ID="DetailsView1" runat="server"  AutoGenerateRows="False" DataKeyNames="news_id" DataSourceID="SqlDataSource1" CellPadding="3">
 
                 <Fields>
-                    <asp:BoundField DataField="news_id" HeaderText="id" ReadOnly="True" SortExpression="news_id"></asp:BoundField>
+                    <asp:BoundField DataField="news_id" HeaderText="id" ReadOnly="True" SortExpression="news_id" ></asp:BoundField>
                     <asp:BoundField DataField="title" HeaderText="標題" SortExpression="title"></asp:BoundField>
                     <asp:BoundField DataField="context" HeaderText="內容" SortExpression="context"></asp:BoundField>
                     <asp:CommandField ShowInsertButton="True" ShowEditButton="True" ShowDeleteButton="True"></asp:CommandField>
                 </Fields>
+                <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510"></FooterStyle>
+                <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" ></HeaderStyle>
+                <PagerStyle HorizontalAlign="Center" ></PagerStyle>
+                <RowStyle BackColor="#FFF7E7"  ></RowStyle>
             </asp:DetailsView>
 
             <a href="Default.aspx">返回</a>
