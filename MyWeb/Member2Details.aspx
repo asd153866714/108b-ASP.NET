@@ -10,8 +10,11 @@
 <body style="padding:80px">
     <form id="form1" runat="server">
         <div>
-            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="user_id" DataSourceID="SqlDataSource1">
+            <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="user_id" DataSourceID="SqlDataSource1" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical">
 
+                <AlternatingRowStyle BackColor="#DCDCDC"></AlternatingRowStyle>
+
+                <EditRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White"></EditRowStyle>
                 <Fields>
                     <asp:BoundField DataField="user_id" HeaderText="user_id" ReadOnly="True" SortExpression="user_id"></asp:BoundField>
                     <asp:TemplateField HeaderText="user_password" SortExpression="user_password">
@@ -26,6 +29,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="user_name" HeaderText="user_name" SortExpression="user_name"></asp:BoundField>
+                    <asp:BoundField DataField="licence" HeaderText="licence" SortExpression="licence"></asp:BoundField>
                     <asp:TemplateField HeaderText="birth" SortExpression="birth">
                         <EditItemTemplate>
                             <asp:TextBox runat="server" Text='<%# Bind("birth", "{0:yyyy年MM月dd日}") %>' ID="TextBox2"></asp:TextBox>
@@ -54,11 +58,17 @@
                     <asp:BoundField DataField="address" HeaderText="address" SortExpression="address"></asp:BoundField>
                     <asp:BoundField DataField="tel" HeaderText="tel" SortExpression="tel"></asp:BoundField>
                     <asp:BoundField DataField="permission" HeaderText="permission" SortExpression="permission"></asp:BoundField>
-                    <asp:CommandField ShowInsertButton="True" ShowEditButton="True" ShowDeleteButton="True"></asp:CommandField>
+                    <asp:HyperLinkField NavigateUrl="~/Member2.aspx" Text="返回" HeaderText="功能"></asp:HyperLinkField>
+                    <asp:CommandField ShowInsertButton="True" ShowEditButton="True" ShowDeleteButton="True"></asp:CommandField>                    
                 </Fields>
-            </asp:DetailsView>
+                <FooterStyle BackColor="#CCCCCC" ForeColor="Black"></FooterStyle>
 
-            <a href="Member2.aspx">返回</a>
+                <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White"></HeaderStyle>
+
+                <PagerStyle HorizontalAlign="Center" BackColor="#999999" ForeColor="Black"></PagerStyle>
+
+                <RowStyle BackColor="#EEEEEE" ForeColor="Black"></RowStyle>
+            </asp:DetailsView>
 
             <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT * FROM [Member] WHERE ([user_id] = @user_id)" DeleteCommand="DELETE FROM [Member] WHERE [user_id] = @user_id" InsertCommand="INSERT INTO [Member] ([user_id], [user_password], [user_name], [licence], [birth], [sex], [address], [tel], [permission]) VALUES (@user_id, @user_password, @user_name, @licence, @birth, @sex, @address, @tel, @permission)" UpdateCommand="UPDATE [Member] SET [user_password] = @user_password, [user_name] = @user_name, [licence] = @licence, [birth] = @birth, [sex] = @sex, [address] = @address, [tel] = @tel, [permission] = @permission WHERE [user_id] = @user_id">
                 <DeleteParameters>

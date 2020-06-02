@@ -22,4 +22,9 @@ public partial class Member2 : System.Web.UI.Page
         Session["id"] = null;
         Response.Redirect("Login.aspx");
     }
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Member2Details.aspx?cmd=new");
+    }
 }
