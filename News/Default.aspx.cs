@@ -12,8 +12,8 @@ public partial class _Default : System.Web.UI.Page
 
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void Button2_Click(object sender, EventArgs e)
     {
-        Response.Redirect("CreateNews.aspx");
+        Response.Redirect("NewsDetails.aspx?cmd=new");
     }
 }
