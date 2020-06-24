@@ -1,6 +1,6 @@
 # 期末專案
 
-## 雲端網址
+## 架站網址
 https://hcxing.azurewebsites.net
 
 ## 功能
