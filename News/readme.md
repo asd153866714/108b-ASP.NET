@@ -1,5 +1,8 @@
 # 期末專案
 
+## 雲端網址
+https://hcxing.azurewebsites.net
+
 ## 功能
 
 * 新聞公告 (新增、修改、刪除、查詢)
