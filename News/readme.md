@@ -16,7 +16,7 @@
 
 * 文字編輯 (套用 CKEdiotor, 沒有連接資料庫)
 
-AJAX 
+* AJAX 
 
 ## 前端
 
