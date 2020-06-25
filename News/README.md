@@ -3,6 +3,9 @@
 ## 架站網址
 https://hcxing.azurewebsites.net
 
+## 登入帳號密碼
+bill: 12345
+
 ## 功能
 
 * 新聞公告 (新增、修改、刪除、查詢)
